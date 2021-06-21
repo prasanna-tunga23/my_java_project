@@ -1,0 +1,14 @@
+---
+- name: Install java, gradle, maven, and spring boot
+  hosts: all
+  remote_user: root
+  # remote_user: user
+  # become: yes
+  # become_method: sudo
+
+  roles:
+    - common
+    - gradle
+    - maven
+    - springboot
+    
