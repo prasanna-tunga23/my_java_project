@@ -1,0 +1,7 @@
+---
+- name: Install gradle
+  yum: name=gradle state=present
+
+- name: Copy gradle configuration for java
+  template: src=default.conf dest=/etc/gradle/conf.d/default.conf
+  notify: restart gradle
